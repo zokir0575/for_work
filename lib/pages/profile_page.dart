@@ -113,7 +113,7 @@ class _ProfilePageState extends State<ProfilePage> {
                       value: selected,
                     onChanged: (String? value){
                       setState(() {
-                        if(value == "O'zbek(Lotin)"){
+                        if(value == myJson[0]["lang"]){
                           Locales.change(context, "uz");
                         } else if(value == myJson[1]["lang"]){
                           Locales.change(context, "ru");

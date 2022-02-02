@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:for_work/model/contracts_model.dart';
@@ -8,7 +9,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../blocs/list_contracts_cubit.dart';
 import '../blocs/list_contracts_state.dart';
-import '../views/view_of_users.dart';
 class SavePage extends StatefulWidget {
   const SavePage({Key? key}) : super(key: key);
 
@@ -57,7 +57,7 @@ class _SavePageState extends State<SavePage> {
                         ),
                       ),
                       SizedBox(width: 12.w,),
-                      Text("Saved", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
+                      LocaleText("saved", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
                     ],
                   ),
                   Row(

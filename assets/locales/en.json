@@ -11,5 +11,9 @@
   "profile": "Profile",
   "date of birth": "Date of birthday",
   "phone number": "Phone number",
-  "new": "New"
+  "new": "New",
+  "change language" : "Change language",
+  "fisher's full name" : "Fisher's full name",
+  "address of the organization" : "Address of the organization",
+  "status of the contract" : "Status of the contract"
 }

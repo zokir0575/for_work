@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:for_work/model/contracts_model.dart';
@@ -38,7 +39,7 @@ Widget itemOfContact({required BuildContext context, required Contracts contract
                 child: FlatButton(
                   onPressed: (){},
                   child: Center(
-                    child: Text("Paid", style: GoogleFonts.ubuntu(color: Colors.white,fontWeight: FontWeight.w500, fontSize: 10.sp),),
+                    child: LocaleText("paid", style: GoogleFonts.ubuntu(color: Colors.white,fontWeight: FontWeight.w500, fontSize: 10.sp),),
                   ),
                 ),
               ),
@@ -61,7 +62,7 @@ Widget itemOfContact({required BuildContext context, required Contracts contract
             margin: EdgeInsets.only(left: 12.w),
             child: Row(
               children: [
-                Text("Amount:", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: Colors.white),),
+                LocaleText("amount:", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: Colors.white),),
                 SizedBox(width: 7.98.w,),
                 Text(contracts.amount!, style: GoogleFonts.ubuntu(fontWeight: FontWeight.w400, fontSize: 14.sp, color:const Color.fromRGBO(153, 153, 153, 1)),)
               ],
@@ -72,7 +73,7 @@ Widget itemOfContact({required BuildContext context, required Contracts contract
             margin: EdgeInsets.only(left: 12.w),
             child: Row(
               children: [
-                Text("Last invoice:", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: Colors.white),),
+                LocaleText("last invoice:", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: Colors.white),),
                 SizedBox(width: 7.98.w,),
                 Text(contracts.lastInvoice!, style: GoogleFonts.ubuntu(fontWeight: FontWeight.w400, fontSize: 14.sp, color:const Color.fromRGBO(153, 153, 153, 1)),)
               ],
@@ -86,7 +87,7 @@ Widget itemOfContact({required BuildContext context, required Contracts contract
               children: [
                 Row(
                   children: [
-                    Text("Number of invoices:", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: Colors.white),),
+                    LocaleText("number of invoices:", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: Colors.white),),
                     SizedBox(width: 7.98.w,),
                     Text(contracts.numInvoice!, style: GoogleFonts.ubuntu(fontWeight: FontWeight.w400, fontSize: 14.sp, color:const Color.fromRGBO(153, 153, 153, 1)),)
 

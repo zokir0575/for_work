@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:for_work/model/information_model.dart';
@@ -7,7 +8,7 @@ Widget itemOfInformation({required BuildContext context, required Information in
   return Container(
     height: 188.11.h,
     width: 343.w,
-    padding: EdgeInsets.all(20.h),
+    padding: EdgeInsets.all(15.h),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(6),
       color: const Color.fromRGBO(42, 42, 45, 1),
@@ -37,7 +38,7 @@ Widget itemOfInformation({required BuildContext context, required Information in
         //#date of birth
         Row(
           children: [
-            Text("Date of birth:", style: GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: const Color.fromRGBO(231, 231, 231, 1)),),
+            LocaleText("date of birth:", style: GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: const Color.fromRGBO(231, 231, 231, 1)),),
             SizedBox(width: 8.w,),
             Text(information.birth!, style: GoogleFonts.ubuntu(fontWeight: FontWeight.w400, fontSize: 14.sp, color:  const Color.fromRGBO(153, 153, 153, 1)),),
           ],
@@ -46,7 +47,7 @@ Widget itemOfInformation({required BuildContext context, required Information in
         //#phone number
         Row(
           children: [
-            Text("Phone number:", style: GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: const Color.fromRGBO(231, 231, 231, 1)),),
+            LocaleText("phone number:", style: GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 14.sp, color: const Color.fromRGBO(231, 231, 231, 1)),),
             SizedBox(width: 8.w,),
             Text(information.phnumber!, style: GoogleFonts.ubuntu(fontWeight: FontWeight.w400, fontSize: 14.sp, color:  const Color.fromRGBO(153, 153, 153, 1)),),
           ],

@@ -11,5 +11,9 @@
   "profile" : "Профил",
   "date of birth": "День рождения",
   "phone number" : "Номер телефона",
-  "new" : "Новый"
+  "new" : "Новый",
+  "change language" : "Изменение языка",
+  "fisher's full name" : "Полное имя рыбака",
+  "address of the organization" : "Адрес организации",
+  "status of the contract" : "Статус контракта"
 }

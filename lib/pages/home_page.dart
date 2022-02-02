@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:for_work/blocs/list_contracts_cubit.dart';
@@ -65,7 +66,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           SizedBox(width: 12.w,),
-                          Text("Contracts", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
+                          LocaleText("contracts", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
                         ],
                       ),
                       Row(
@@ -131,7 +132,7 @@ class _HomePageState extends State<HomePage> {
                             child: FlatButton(
                               onPressed: (){},
                               child: Center(
-                                child: Text("Contracts", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 15.sp, color: Colors.white),),
+                                child: Text("Contract", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 15.sp, color: Colors.white),),
                               ),
                             ),
                           ),
@@ -146,7 +147,7 @@ class _HomePageState extends State<HomePage> {
                               child: FlatButton(
                                 onPressed: (){},
                                 child: Center(
-                                  child: Text("Invoice", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 15.sp, color: Colors.white),),
+                                  child: Text("invoice", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 15.sp, color: Colors.white),),
                                 ),
                               )
                           )

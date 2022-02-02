@@ -12,5 +12,8 @@
   "date of birth": "Tug'ilgan kuni",
   "phone number" : "Telefon raqam",
   "new" : "Yangi",
-  "change language" : "Til o'zgartirish"
+  "change language" : "Til o'zgartirish",
+  "fisher's full name" : "To'liq ism",
+  "address of the organization" : "Tashkilot manizili",
+  "status of the contract" : "Shartnoma holati"
 }

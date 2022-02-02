@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:for_work/model/contracts_model.dart';
@@ -59,7 +60,7 @@ class _HistoryPageState extends State<HistoryPage> {
                         ),
                       ),
                       SizedBox(width: 12.w,),
-                      Text("history", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
+                      LocaleText("history", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
                     ],
                   ),
                   Row(
@@ -80,7 +81,7 @@ class _HistoryPageState extends State<HistoryPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(margin: EdgeInsets.only(left: 16.w),child: Text("Date", style:  GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w700, color: Color.fromRGBO(153, 153, 153, 1)),)),
+                Container(margin: EdgeInsets.only(left: 16.w),child: LocaleText("date", style:  GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w700, color: Color.fromRGBO(153, 153, 153, 1)),)),
               ],
             ),
             SizedBox(height: 16.h,),
