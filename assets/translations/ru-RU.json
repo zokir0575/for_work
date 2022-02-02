@@ -1,0 +1,15 @@
+{
+  "contracts" : "Контракты",
+  "invoice" : "Счет",
+  "paid" : "Оплачено",
+  "amount" : "Количество",
+  "last invoice" : "Последний счет",
+  "number of invoice" : "Номер счета",
+  "history" : "История",
+  "date" : "Число",
+  "saved" : "Сохранено",
+  "profile" : "Профил",
+  "date of birth": "День рождения",
+  "phone number" : "Номер телефона",
+  "new" : "Новый"
+}

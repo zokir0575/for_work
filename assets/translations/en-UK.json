@@ -1,0 +1,15 @@
+{
+  "contracts": "Contracts",
+  "invoice": "Invoice",
+  "paid": "Paid",
+  "amount": "Amount",
+  "last invoice": "Last invoice",
+  "number of invoice": "Number of invoice",
+  "history": "History",
+  "date": "Date",
+  "saved": "Saved",
+  "profile": "Profile",
+  "date of birth": "Date of birthday",
+  "phone number": "Phone number",
+  "new": "New"
+}

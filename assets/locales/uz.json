@@ -1,0 +1,16 @@
+{
+  "contracts" : "Shartnomalar",
+  "invoice" : "Hisob",
+  "paid" : "To'langan",
+  "amount" : "Jami",
+  "last invoice" : "Oxirgi hisob",
+  "number of invoice" : "Hisoblar soni",
+  "history" : "Tarix",
+  "date" : "Sana",
+  "saved" : "Saqlangan",
+  "profile" : "Profil",
+  "date of birth": "Tug'ilgan kuni",
+  "phone number" : "Telefon raqam",
+  "new" : "Yangi",
+  "change language" : "Til o'zgartirish"
+}
