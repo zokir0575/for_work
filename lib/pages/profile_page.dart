@@ -108,18 +108,18 @@ class _ProfilePageState extends State<ProfilePage> {
                   alignedDropdown: true,
                   child: DropdownButton(
                     dropdownColor: const Color.fromRGBO(42, 42, 45, 1),
-                    hint: Text("Change language",
-                       style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w500, color: const Color.fromRGBO(231, 231, 231, 1)),),
+                    // hint: Text("Change language",
+                    //   style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w500, color: const Color.fromRGBO(231, 231, 231, 1)),),
                       value: selected,
                     onChanged: (String? value){
+                      if(value == myJson[0]["lang"]){
+                        Locales.change(context, "uz");
+                      } else if(value == myJson[1]["lang"]){
+                        Locales.change(context, "ru");
+                      } else{
+                        Locales.change(context, "en");
+                      }
                       setState(() {
-                        if(value == myJson[0]["lang"]){
-                          Locales.change(context, "uz");
-                        } else if(value == myJson[1]["lang"]){
-                          Locales.change(context, "ru");
-                        } else{
-                          Locales.change(context, "en");
-                        }
                         selected = value!;
                       });
                     },

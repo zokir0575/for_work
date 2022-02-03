@@ -8,7 +8,7 @@ Widget viewOfSaved(List<Contracts> items, bool isLoading ){
   return Stack(
     children: [
       SizedBox(
-        height: 680.h,
+        height: 666.h,
         child: ListView.builder(
             shrinkWrap: true,
             padding: EdgeInsets.only(bottom: 8.h),

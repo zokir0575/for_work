@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(),
         localizationsDelegates: Locales.delegates,
         supportedLocales: Locales.supportedLocales,
+        debugShowCheckedModeBanner: false,
         locale: locale,
         home: MultiBlocProvider(
           providers: [

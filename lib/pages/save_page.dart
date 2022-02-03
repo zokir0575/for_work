@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:for_work/model/contracts_model.dart';
+import 'package:for_work/pages/search_page.dart';
 import 'package:for_work/views/view_of_saved.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -27,11 +27,11 @@ class _SavePageState extends State<SavePage> {
           children: [
             //#top
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
               width: double.infinity.w,
               height: 51.h,
               decoration: const BoxDecoration(
-                color: Colors.black,
+                color: Color.fromRGBO(20, 20, 22, 1),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -57,14 +57,39 @@ class _SavePageState extends State<SavePage> {
                         ),
                       ),
                       SizedBox(width: 12.w,),
-                      LocaleText("saved", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
+                      Text("Saved", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
                     ],
                   ),
                   Row(
                     children: [
-                      IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/Filter.svg")),
-                      IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/line.svg")),
-                      IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/zoom.svg")),
+                      Container(
+                          height: 14.81.h,
+                          width: 16.67.w,
+                          child: GestureDetector(
+                            onTap: (){},
+                            child: SvgPicture.asset("assets/images/Filter.svg"),
+                          )
+                      ),
+                      SizedBox(width: 21.67.w,),
+                      Container(
+                          height: 14.81.h,
+                          width: 16.67.w,
+                          child: GestureDetector(
+                            onTap: (){},
+                            child:SvgPicture.asset("assets/images/line.svg"),
+                          )
+                      ),
+                      SizedBox(width: 21.25.w,),
+                      Container(
+                        height: 14.81.h,
+                        width: 16.67.w,
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => SearchPage(contracts: [])));
+                          },
+                          child: SvgPicture.asset("assets/images/zoom.svg"),
+                        ),
+                      ),
                     ],
                   ),
                 ],

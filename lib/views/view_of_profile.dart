@@ -20,7 +20,7 @@ Widget viewOfProfile(List<Information> items, bool isLoading){
             scrollDirection: Axis.vertical,
             itemCount: items.length,
             itemBuilder: (ctx, index){
-              return itemOfInformation(context: ctx,  information: items[index]);
+              return itemOfInformation(context: ctx,  information: items[0]);
             }
         ),
       ),

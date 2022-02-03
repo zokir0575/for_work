@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:for_work/model/contracts_model.dart';
+import 'package:for_work/pages/search_page.dart';
 import 'package:for_work/views/view_of_history.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../blocs/list_contracts_cubit.dart';
@@ -30,11 +30,11 @@ class _HistoryPageState extends State<HistoryPage> {
           children: [
             //#top
             Container(
-              margin: EdgeInsets.symmetric(horizontal: 20.w),
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
               width: double.infinity.w,
               height: 51.h,
               decoration: const BoxDecoration(
-                color: Colors.black,
+                color: Color.fromRGBO(20, 20, 22, 1),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -60,14 +60,39 @@ class _HistoryPageState extends State<HistoryPage> {
                         ),
                       ),
                       SizedBox(width: 12.w,),
-                      LocaleText("history", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
+                      Text("History", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
                     ],
                   ),
                   Row(
                     children: [
-                      IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/Filter.svg")),
-                      IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/line.svg")),
-                      IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/zoom.svg")),
+                      Container(
+                          height: 14.81.h,
+                          width: 16.67.w,
+                          child: GestureDetector(
+                            onTap: (){},
+                            child: SvgPicture.asset("assets/images/Filter.svg"),
+                          )
+                      ),
+                      SizedBox(width: 21.67.w,),
+                      Container(
+                          height: 14.81.h,
+                          width: 16.67.w,
+                          child: GestureDetector(
+                            onTap: (){},
+                            child:SvgPicture.asset("assets/images/line.svg"),
+                          )
+                      ),
+                      SizedBox(width: 21.25.w,),
+                      Container(
+                        height: 14.81.h,
+                        width: 16.67.w,
+                        child: GestureDetector(
+                          onTap: (){
+                            Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => SearchPage(contracts: [])));
+                          },
+                          child: SvgPicture.asset("assets/images/zoom.svg"),
+                        ),
+                      ),
                     ],
                   ),
                 ],
@@ -81,7 +106,7 @@ class _HistoryPageState extends State<HistoryPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(margin: EdgeInsets.only(left: 16.w),child: LocaleText("date", style:  GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w700, color: Color.fromRGBO(153, 153, 153, 1)),)),
+                Container(margin: EdgeInsets.only(left: 16.w),child: Text("Date", style:  GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w700, color: Color.fromRGBO(153, 153, 153, 1)),)),
               ],
             ),
             SizedBox(height: 16.h,),
@@ -89,7 +114,7 @@ class _HistoryPageState extends State<HistoryPage> {
               children: [
                 Container(
                   margin: EdgeInsets.only(left: 16.w),
-                  padding: EdgeInsets.only(right: 10.w),
+                  padding: EdgeInsets.all(10.h),
                   height: 37.h,
                   width: 116.w,
                   decoration: BoxDecoration(
@@ -98,24 +123,22 @@ class _HistoryPageState extends State<HistoryPage> {
                   ),
                   child: TextField(
                     decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(8.h),
                       border: InputBorder.none,
-                      suffixIcon: SvgPicture.asset("assets/images/Calendar.svg"),
-                      suffixIconConstraints: const BoxConstraints(
-                        minHeight: 18 ,
-                        minWidth: 16,
-                      ),
+                      suffixIcon:  Container(
+                        margin: EdgeInsets.only(left: 20.w),
+                        height: 8.59.h,
+                        width: 9.97.w,
+                        child: SvgPicture.asset("assets/images/Calendar.svg"),
+                      )
                       
                     ),
                   ),
                 ),
-                SizedBox(width: 8.w,),
+                SizedBox(width: 16.w,),
                 Container(
                   width: 8.w,
-                  height: 0.h,
-                  decoration: const BoxDecoration(
-                    color: Colors.white
-                  ),
+                  height: 1.h,
+                  color: Colors.white,
                 ),
                 SizedBox(width: 8.w,),
                 Container(
@@ -130,15 +153,15 @@ class _HistoryPageState extends State<HistoryPage> {
                   child: TextField(
                     decoration: InputDecoration(
                       border: InputBorder.none,
-                      contentPadding: EdgeInsets.all(10.h),
+                      contentPadding: EdgeInsets.only(bottom: 14.h),
                       hintText: "To",
-                      alignLabelWithHint: true,
                       hintStyle: GoogleFonts.ubuntu(color: const Color.fromRGBO(153, 153, 153, 1), fontWeight: FontWeight.w500, fontSize: 14.sp),
-                      suffixIcon: SvgPicture.asset("assets/images/Calendar.svg"),
-                      suffixIconConstraints: const BoxConstraints(
-                        minHeight: 18 ,
-                        minWidth: 16,
-                      ),
+                      suffixIcon: Container(
+                        margin: EdgeInsets.only(left: 20.w),
+                        height: 8.59.h,
+                        width: 9.97.w,
+                        child: SvgPicture.asset("assets/images/Calendar.svg"),
+                      )
 
                     ),
                   ),

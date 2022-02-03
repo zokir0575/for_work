@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+
 Widget viewOfCreate(bool isLoading, BuildContext context, TextEditingController fishController, TextEditingController addressController, TextEditingController innController, String? dropdownValue, String? faceValue){
   return  Column(
     mainAxisAlignment: MainAxisAlignment.start,

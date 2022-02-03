@@ -66,28 +66,46 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           SizedBox(width: 12.w,),
-                          LocaleText("contracts", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
+                          Text("Contracts", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
                         ],
                       ),
                       Row(
                         children: [
-                          IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/Filter.svg")),
-                          IconButton(onPressed: (){}, icon: SvgPicture.asset("assets/images/line.svg")),
-                          IconButton(
-                              onPressed: (){
+                          Container(
+                              height: 14.81.h,
+                              width: 16.67.w,
+                              child: GestureDetector(
+                                onTap: (){},
+                                child: SvgPicture.asset("assets/images/Filter.svg"),
+                              )
+                          ),
+                          SizedBox(width: 21.67.w,),
+                          Container(
+                              height: 14.81.h,
+                              width: 16.67.w,
+                              child: GestureDetector(
+                                onTap: (){},
+                                child:SvgPicture.asset("assets/images/line.svg"),
+                              )
+                          ),
+                          SizedBox(width: 21.25.w,),
+                          Container(
+                            height: 14.81.h,
+                            width: 16.67.w,
+                            child: GestureDetector(
+                              onTap: (){
                                 Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => SearchPage(contracts: [])));
                               },
-                              icon: SvgPicture.asset("assets/images/zoom.svg")
+                              child: SvgPicture.asset("assets/images/zoom.svg"),
+                            ),
                           ),
                         ],
                       ),
-                    ],
+                   ],
                   ),
                 ),
                 //#calendar
                 Container(
-                  height: 148.h,
-                  width: double.infinity.w,
                   decoration: const  BoxDecoration(
                       borderRadius: BorderRadius.only(bottomLeft: Radius.circular(10), bottomRight: Radius.circular(10)),
                       boxShadow: [
@@ -115,7 +133,6 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SizedBox(height: 12.h,),
                 SingleChildScrollView(
-
                   child: Column(
                     children: [
                       Row(
@@ -132,7 +149,8 @@ class _HomePageState extends State<HomePage> {
                             child: FlatButton(
                               onPressed: (){},
                               child: Center(
-                                child: Text("Contract", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 15.sp, color: Colors.white),),
+                                child: Text("Contracts", textScaleFactor: 1.0,
+                                  style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: ScreenUtil().setSp(15), color: Colors.white),),
                               ),
                             ),
                           ),
@@ -147,7 +165,7 @@ class _HomePageState extends State<HomePage> {
                               child: FlatButton(
                                 onPressed: (){},
                                 child: Center(
-                                  child: Text("invoice", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 15.sp, color: Colors.white),),
+                                  child: Text("Invoice", style:  GoogleFonts.ubuntu(fontWeight: FontWeight.w500, fontSize: 15.sp, color: Colors.white),),
                                 ),
                               )
                           )

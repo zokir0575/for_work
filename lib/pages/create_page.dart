@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_locales/flutter_locales.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:for_work/pages/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -30,11 +29,10 @@ class _CreatePageState extends State<CreatePage> {
             //#top
             Container(
               padding: EdgeInsets.symmetric(horizontal: 15.w),
-
               width: double.infinity.w,
               height: 51.h,
               decoration: const BoxDecoration(
-                color: Color.fromRGBO(20, 20, 22, 1),
+                color: Color.fromRGBO(0, 0, 0, 1),
               ),
               child:  Row(
                 children: [
@@ -57,7 +55,7 @@ class _CreatePageState extends State<CreatePage> {
                     ),
                   ),
                   SizedBox(width: 12.w,),
-                  LocaleText("contracts", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
+                  Text("Contracts", style: GoogleFonts.ubuntu(fontSize: 18.sp, fontWeight: FontWeight.w500, color: Colors.white),),
                 ],
               ),
 
@@ -108,7 +106,7 @@ class _CreatePageState extends State<CreatePage> {
                     ),
                   ),
                   SizedBox(height: 16.h,),
-                  LocaleText("fisher's full name", style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w400, color: const Color.fromRGBO(241, 241, 241, 1)),),
+                  Text("Fisher's full name", style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w400, color: const Color.fromRGBO(241, 241, 241, 1)),),
                   SizedBox(height: 6.h,),
                   //#fullname textfield
                   Container(
@@ -132,7 +130,7 @@ class _CreatePageState extends State<CreatePage> {
                     ),
                   ),
                   SizedBox(height: 16.h,),
-                  LocaleText("address of the organization", style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w400, color: const Color.fromRGBO(241, 241, 241, 1)),),
+                  Text("Address of the organization", style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w400, color: const Color.fromRGBO(241, 241, 241, 1)),),
                   SizedBox(height: 6.h,),
                   Container(
                     width: 343.w,
@@ -178,7 +176,7 @@ class _CreatePageState extends State<CreatePage> {
                     ),
                   ),
                   SizedBox(height: 16.h,),
-                  LocaleText("status of the contract", style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w400, color: const Color.fromRGBO(241, 241, 241, 1)),),
+                  Text("Status of the contract", style: GoogleFonts.ubuntu(fontSize: 14.sp, fontWeight: FontWeight.w400, color: const Color.fromRGBO(241, 241, 241, 1)),),
                   SizedBox(height: 6.h,),
                   Container(
                     width: 343.w,
