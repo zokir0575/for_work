@@ -8,8 +8,6 @@ import 'package:google_fonts/google_fonts.dart';
 Widget itemOfContact({required BuildContext context, required Contracts contracts}){
   return Expanded(
     child: Container(
-      height: 148.h,
-       width: 343.w,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(6.r),
         color: const Color.fromRGBO(42, 42, 45, 1),
